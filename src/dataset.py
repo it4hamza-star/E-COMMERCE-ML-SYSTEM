@@ -14,3 +14,8 @@ def generate_dataset(n_samples=1000, n_features=20, random_state=42):
     X = pd.DataFrame(X_array, columns=feature_names)
     y = pd.Series(y, name="Purchase")
     return X, y
+
+if __name__ == "__main__":
+    X, y = generate_dataset()
+    print(X.head())
+    print(y.value_counts())
